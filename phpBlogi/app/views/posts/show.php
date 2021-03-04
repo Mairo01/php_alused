@@ -4,6 +4,15 @@
     Created by <?php echo $data['post']->user_id; ?> at <?php echo $data['post']->created_at; ?>
 </div>
 <p><?php echo $data['post']->content; ?></p>
+
+<div class='bg-white p-2 mb-3'>
+
+</div>
+<?php foreach ($data['tags'] as $tag):?>
+<a href="<?php echo URLROOT ?>/tags/show/<?php echo $tag->id; ?>" class=''>
+<span class='badge badge-info'><?php echo $tag->name; ?></span></a>
+<?php endforeach;?>
+
 <a href="<?php echo URLROOT ?>/posts" class="btn btn-info">Back</a>
 <hr>
 <?php if ($data['post']->user_id == $_SESSION['user_id']): ?>
