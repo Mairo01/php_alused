@@ -19,6 +19,7 @@ class Posts extends Controller{
         $this->view('posts/index', $data);
         
     }
+    // post sisu + tag
     public function show($id){
         $post = $this -> postsModel -> getPostById($id);
         $tags = $this -> tagsModel -> getPostTags($id);
