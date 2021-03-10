@@ -11,4 +11,6 @@
         </li>
     <?php endforeach; ?>
 </ul>
+<a href="<?php echo URLROOT ?>/" class="btn btn-info">Back</a>
+<hr>
 <?php require_once APPROOT.'/views/inc/footer.php'; ?>
